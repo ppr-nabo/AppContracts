@@ -2,6 +2,8 @@
 
 ### Login
 
+Path: `/user/auth`
+
 Input
 ```
 {
@@ -30,6 +32,38 @@ Error Cause
 * EmptyLoginCredentials
 * UserNotFound
 
-### Sign up
+### Address verification
+
+Path: `/address/verify`
+
+Input
+```
+{
+	firstName: String,
+	lastName: String,
+	street1: String,
+	street2: String,
+	city: String,
+	zip: String
+}
+```
+
+Output
+```
+{
+	"verifiedAddress": Boolean
+}
+```
+
+Error
+```
+{
+	"errorCause": {refer Error Cause},
+	"errorDetail": String
+}
 
 ```
+
+Error Cause  
+* UnsupportedLocation
+* ProviderCallFailure
