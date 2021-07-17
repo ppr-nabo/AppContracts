@@ -147,3 +147,24 @@ Error Cause
 * EmptyLoginCredentials
 * UserNotFound
 
+### Delete user profile
+
+Path: `/user/delete`
+
+Input
+```
+{
+	userName: String,
+        email: String
+}
+```
+
+Output
+```
+{
+    success: Boolean
+}
+```
+
+
+
