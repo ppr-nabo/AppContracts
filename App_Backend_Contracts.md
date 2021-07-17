@@ -106,3 +106,44 @@ Error
 Error Cause  
 * DuplicateRegistrationAttempt
 
+
+### Get user profile
+
+Path: `/user/profile`
+
+Input
+```
+{
+	userName: String
+}
+```
+
+Output
+```
+{
+        email: String,
+	phone: String,
+	firstName: String,
+	lastName: String,
+	street1: String,
+	street2: String,
+	city: String,
+	zip: String,
+        createdTimestamp: DataTime
+	displayName: String
+}
+```
+
+Error
+```
+{
+	"errorCause": {refer Error Cause},
+	"errorDetail": String
+}
+
+```
+
+Error Cause  
+* EmptyLoginCredentials
+* UserNotFound
+
