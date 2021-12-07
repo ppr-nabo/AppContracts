@@ -167,4 +167,53 @@ Output
 ```
 
 
+### Skills
 
+#### Get all skills
+Path: `/skills`
+
+Input: Empty body
+
+Output
+```
+[ // List of skills
+  {
+    id: String,
+    name: String,
+    description: String
+  }
+]
+```
+#### Add skills to user
+Path: `/skills/user`
+
+Input
+```
+{
+    "userName": String,
+    "skills": [Int] // Skill ID
+}
+```
+
+Output
+```
+{
+    "success": Boolean
+}
+```
+
+#### Get user skills
+Path: `/skills/user/<username>`
+
+Input: Empty body
+
+Output:
+```
+[ // List of skills
+  {
+    id: String,
+    name: String,
+    description: String
+  }
+]
+```
